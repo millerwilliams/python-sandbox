@@ -1,0 +1,15 @@
+pyg = 'ay' # setting variable pyg to 'ay' for later use
+
+original = raw_input('Enter a word:') #asking user for input
+
+if len(original) > 0 and original.isalpha(): #making sure inputted word is alphabetical and contains characters
+    word=original.lower() #making sure the word is converted to lowercase
+    first=word[0] #associating variable first with the first letter in the string
+    if first=="a" or first=="e" or first=="i" or first=="o" or first=="u": #if first letter is a vowel
+        new_word=word+pyg #then add 'ay' to the end of the word
+        print new_word
+    else:
+        new_word=word[1:10]+word[0]+pyg #if first letter is a consonant (isn't a vowel) then slice off the consonant, move it to the end, and add that on to the word from second character to last
+        print new_word #return translated word
+else:
+    print 'empty'
